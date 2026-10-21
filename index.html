@@ -33,7 +33,8 @@ body{
     linear-gradient(90deg,var(--line) 1px,transparent 1px);
   background-size:32px 32px;background-position:-1px -1px;
 }
-img{max-width:100%;display:block;image-rendering:pixelated}
+img{max-width:100%;display:block}
+img.pixel{image-rendering:pixelated}
 a{color:var(--teal-dark)}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
@@ -168,26 +169,26 @@ footer{background:var(--ink);color:#B8C6D1;padding:24px 0;font-size:.9rem}
           <ul class="meta"><li class="role">Banner</li><li class="role">Poster</li><li class="role">Art main menu</li><li class="role">Komik opening</li></ul>
           <details>
             <summary>Lihat proses</summary>
-            <dl><dt>Brief</dt><dd>Game designer meminta character concept yang lucu dan imut.</dd><dt>Yang saya buat</dt><dd>Character concept, banner, poster, art main menu, dan komik opening 5 halaman tentang peternak lebah yang disengat lalu terbangun di kerajaan lebah.</dd><dt>Proses</dt><dd>Warna dasar (flat color), dilanjutkan dengan shading.</dd><dt>Revisi</dt><dd>Di halaman perkenalan ratu, sudut kamera dijauhkan dan proporsi ratu disesuaikan atas masukan dosen.</dd></dl>
+            <dl><dt>Brief</dt><dd>Game designer meminta character concept yang lucu dan imut.</dd><dt>Yang saya buat</dt><dd>Character concept, banner, poster, art main menu, dan komik opening 5 halaman tentang peternak lebah yang disengat lalu terbangun di kerajaan lebah.</dd><dt>Proses</dt><dd>Warna dasar (flat color), dilanjutkan dengan shading.</dd><dt>Revisi</dt><dd>Di halaman perkenalan ratu, sudut kamera dijauhkan dan proporsi ratu disesuaikan atas masukan dosen.</dd></dl>           <img src="assets/honey-war-flat.jpg" alt="Flat color karakter">           <img src="assets/honey-war-shading.jpg" alt="Karakter setelah shading">           <img src="assets/honey-war-comic-1.jpg" alt="Komik opening halaman 1">           <img src="assets/honey-war-comic-2.jpg" alt="Komik opening halaman 2">
           </details>
           <div class="links"><a href="#">Main di itch.io</a></div>
         </div>
       </article>
       <article class="project">
-        <div class="shot">Taruh gambar utama Wolf’s Chase di sini</div>
+        <div class="shot"><img src="assets/wolfs-chase-cover.jpg" alt="Art main menu Wolf’s Chase"></div>
         <div class="body">
           <h3>Wolf’s Chase</h3>
           <p>Game arcade yang terinspirasi dari Pac-Man.</p>
           <ul class="meta"><li class="role">UI/UX</li><li class="role">Art main menu</li><li class="role">Banner</li><li class="role">Poster</li></ul>
           <details>
             <summary>Lihat proses</summary>
-            <dl><dt>Yang saya buat</dt><dd>Tombol main menu (Play, Setting, Exit), layar pemilihan level, serta background untuk keduanya.</dd><dt>Keputusan desain</dt><dd>Tata letak mengikuti pola game lain supaya terasa familiar dan pemain langsung tahu cara memakainya.</dd><dt>Key art</dt><dd>Banner dibuat dari art main menu, dengan suasana imut tapi tegang.</dd></dl>
+            <dl><dt>Yang saya buat</dt><dd>Tombol main menu (Play, Setting, Exit), layar pemilihan level, serta background untuk keduanya.</dd><dt>Keputusan desain</dt><dd>Tata letak mengikuti pola game lain supaya terasa familiar dan pemain langsung tahu cara memakainya.</dd><dt>Key art</dt><dd>Banner dibuat dari art main menu, dengan suasana imut tapi tegang.</dd></dl>           <img src="assets/wolfs-chase-levels.jpg" alt="Layar pemilihan level">           <img src="assets/wolfs-chase-banner.jpg" alt="Banner Wolf’s Chase">
           </details>
           <div class="links"><a href="#">Main di itch.io</a></div>
         </div>
       </article>
       <article class="project">
-        <div class="shot">Taruh gambar utama Between You and Me di sini</div>
+        <div class="shot"><img src="assets/between-cover.jpg" alt="Dua karakter utama Between You and Me"></div>
         <div class="body">
           <h3>Between You and Me</h3>
           <p>Game platformer yang dibuat untuk game jam internal 2026.</p>
@@ -200,20 +201,20 @@ footer{background:var(--ink);color:#B8C6D1;padding:24px 0;font-size:.9rem}
         </div>
       </article>
       <article class="project">
-        <div class="shot">Taruh gambar utama Nicholas’s Flight di sini</div>
+        <div class="shot"><img class="pixel" src="assets/nicholas-cover.jpg" alt="Objek pixel art Nicholas’s Flight"></div>
         <div class="body">
           <h3>Nicholas’s Flight</h3>
           <p>Game puzzle berbasis waktu. Bantu Nicholas mencapai penerbangannya!</p>
           <ul class="meta"><li class="role">Sprite puzzle</li></ul>
           <details>
             <summary>Lihat proses</summary>
-            <dl><dt>Yang saya buat</dt><dd>Objek puzzle berupa peralatan rumah tangga dalam gaya pixel art.</dd><dt>Detail</dt><dd>Ukuran beragam, dari 16x16 sampai 32x32, dengan outline pada objek.</dd></dl>
+            <dl><dt>Yang saya buat</dt><dd>Objek puzzle berupa peralatan rumah tangga dalam gaya pixel art.</dd><dt>Detail</dt><dd>Ukuran beragam, dari 16x16 sampai 32x32, dengan outline pada objek.</dd></dl>           <img class="pixel" src="assets/nicholas-objects.jpg" alt="Sprite peralatan rumah tangga">
           </details>
           <div class="links"><a href="#">Main di itch.io</a></div>
         </div>
       </article>
       <article class="project">
-        <div class="shot">Taruh gambar utama Reach It di sini</div>
+        <div class="shot"><img src="assets/reach-it-cover.jpg" alt="Main menu Reach It"></div>
         <div class="body">
           <h3>Reach It</h3>
           <p>Game absurd bertemakan jari yang ingin mencapai makanannya.</p>
@@ -226,7 +227,7 @@ footer{background:var(--ink);color:#B8C6D1;padding:24px 0;font-size:.9rem}
         </div>
       </article>
       <article class="project">
-        <div class="shot">Taruh gambar utama Slide to Cave di sini</div>
+        <div class="shot"><img src="assets/slide-cave-cover.jpg" alt="Gameplay Slide to Cave"></div>
         <div class="body">
           <h3>Slide to Cave</h3>
           <p>Game puzzle dengan mekanik ice slide.</p>
@@ -248,9 +249,9 @@ footer{background:var(--ink);color:#B8C6D1;padding:24px 0;font-size:.9rem}
     <h2>Karya lain</h2>
     <p class="lead">Gambar anime di waktu luang.</p>
     <div class="others">
-      <div class="shot">Gambar 1</div>
-      <div class="shot">Gambar 2</div>
-      <div class="shot">Gambar 3</div>
+      <div class="shot"><img src="assets/anime-1.jpg" alt="Ilustrasi anime 1"></div>
+      <div class="shot"><img src="assets/anime-2.jpg" alt="Ilustrasi anime 2"></div>
+      <div class="shot"><img src="assets/anime-3.jpg" alt="Ilustrasi anime 3"></div>
     </div>
   </div>
 </section>
