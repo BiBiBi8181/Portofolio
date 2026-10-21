@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abi Bakri – 2D Game Artist</title>
+<meta name="description" content="Portofolio Abi Bakri, 2D game artist: karakter, UI/UX, key art, dan game indie.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E9EEF1;
+  --card:#F7F9FA;
+  --ink:#1C2B3A;
+  --muted:#586877;
+  --line:#C5D0D8;
+  --teal:#1F8A7D;
+  --teal-dark:#14625A;
+  --sun:#F2B53C;
+  --font-display:"Pixelify Sans","Courier New",monospace;
+  --font-body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:1.05rem;line-height:1.65;
+  /* kertas grid, mengingatkan pada canvas pixel art */
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:32px 32px;background-position:-1px -1px;
+}
+img{max-width:100%;display:block;image-rendering:pixelated}
+a{color:var(--teal-dark)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* Navigasi */
+header.nav{background:var(--ink);color:#fff}
+header.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+.nav a:not(.brand){color:#D6E0E7;text-decoration:none;font-weight:600}
+.nav a:not(.brand):hover{color:var(--sun)}
+
+/* Hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;margin:0 0 18px;font-weight:700}
+.hero p{max-width:34em;margin:0 0 26px;color:var(--muted);font-size:1.15rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;font-weight:700;text-decoration:none;border:3px solid var(--ink);background:var(--sun);color:var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.alt{background:var(--card)}
+.hero svg{width:100%;max-width:340px;justify-self:center;shape-rendering:crispEdges}
+
+/* Bagian */
+section{padding:56px 0}
+h2{font-family:var(--font-display);font-size:2rem;margin:0 0 8px;font-weight:700}
+.lead{color:var(--muted);margin:0 0 32px;max-width:40em}
+
+/* Proyek */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.project{background:var(--card);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column}
+.project.featured{grid-column:1/-1;flex-direction:row}
+.project.featured .shot{flex:1.3;aspect-ratio:auto;min-height:320px}
+.project.featured .body{flex:1}
+.shot{aspect-ratio:5/4;background:#DCE4E9;border-bottom:3px solid var(--ink);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;text-align:center;padding:16px;overflow:hidden}
+.project.featured .shot{border-bottom:0;border-right:3px solid var(--ink)}
+.shot img,.shot video{width:100%;height:100%;object-fit:cover}
+.body{padding:22px 24px 26px}
+.body h3{font-family:var(--font-display);font-size:1.5rem;margin:0 0 6px;font-weight:700}
+.body p{margin:0 0 14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.meta li{background:#fff;border:2px solid var(--line);padding:2px 10px;font-size:.85rem;font-weight:600}
+.meta li.role{border-color:var(--teal);color:var(--teal-dark)}
+details{border-top:2px dashed var(--line);padding-top:12px}
+summary{cursor:pointer;font-weight:700;color:var(--teal-dark)}
+details dl{margin:12px 0 0}
+details dt{font-weight:700;margin-top:10px}
+details dd{margin:2px 0 0;color:var(--muted)}
+.links{display:flex;gap:16px;margin-top:14px;font-weight:700}
+
+/* Karya lain */
+.others{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.others .shot{aspect-ratio:1/1;border:3px solid var(--ink);background:#DCE4E9}
+
+/* Tentang & kontak */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about ul{padding-left:1.1em;margin:0}
+.about li{margin-bottom:6px}
+.contact a{display:block;font-weight:700;font-size:1.15rem;margin-bottom:6px}
+footer{background:var(--ink);color:#B8C6D1;padding:24px 0;font-size:.9rem}
+
+/* HP */
+@media (max-width:760px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .grid,.others{grid-template-columns:1fr}
+  .project.featured{flex-direction:column}
+  .project.featured .shot{min-height:0;aspect-ratio:5/4;border-right:0;border-bottom:3px solid var(--ink)}
+  .hero{padding-top:44px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#">Abi Bakri</a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#karya">Karya</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Aku membuat karakter, UI, dan environment untuk game.</h1>
+      <!-- GANTI: tulis 1-2 kalimat tentang dirimu -->
+      <p>2D game artist dengan game yang sudah rilis di itch.io: desain karakter, UI/UX, dan menu utama, sampai banner, poster, dan komik pembuka. Saya juga membuat aset pixel isometrik.</p>
+      <div class="btns">
+        <a class="btn" href="#karya">Lihat karya</a>
+        <a class="btn alt" href="#kontak">Hubungi saya</a>
+      </div>
+    </div>
+
+    <!-- Bangunan isometrik sederhana. GANTI dengan aset terbaikmu, misalnya: <img src="assets/hero.png" alt="..."> -->
+    <svg viewBox="0 0 160 160" role="img" aria-label="Ilustrasi bangunan pixel isometrik">
+      <ellipse cx="80" cy="140" rx="62" ry="14" fill="#C5D0D8"/>
+      <polygon points="30,65 80,90 80,140 30,115" fill="#2E7F86"/>
+      <polygon points="80,90 130,65 130,115 80,140" fill="#1E5F66"/>
+      <polygon points="80,40 130,65 80,90 30,65" fill="#7FC4B6"/>
+      <polygon points="40,78 56,86 56,102 40,94" fill="#F2B53C"/>
+      <polygon points="60,88 72,94 72,108 60,102" fill="#DCE4E9"/>
+      <polygon points="88,94 100,88 100,104 88,110" fill="#DCE4E9"/>
+      <polygon points="92,48 100,52 100,68 92,64" fill="#8A4F3D"/>
+      <polygon points="100,52 108,48 108,64 100,68" fill="#6B3B2E"/>
+      <polygon points="100,44 108,48 100,52 92,48" fill="#B8705A"/>
+    </svg>
+  </div>
+</section>
+
+<!-- KARYA -->
+<section id="karya">
+  <div class="wrap">
+    <h2>Karya</h2>
+    <p class="lead">Game yang saya kerjakan, dengan peran saya di masing-masing proyek.</p>
+
+    <div class="grid">
+
+      <article class="project">
+        <div class="shot"><img src="assets/honey-war-cover.png" alt="Poster Honey War"></div>
+        <div class="body">
+          <h3>Honey War</h3>
+          <p>Game strategi tower defense. Lindungi koloni lebahmu!</p>
+          <ul class="meta"><li class="role">Banner</li><li class="role">Poster</li><li class="role">Art main menu</li><li class="role">Komik opening</li></ul>
+          <details>
+            <summary>Lihat proses</summary>
+            <dl><dt>Brief</dt><dd>Game designer meminta character concept yang lucu dan imut.</dd><dt>Yang saya buat</dt><dd>Character concept, banner, poster, art main menu, dan komik opening 5 halaman tentang peternak lebah yang disengat lalu terbangun di kerajaan lebah.</dd><dt>Proses</dt><dd>Warna dasar (flat color), dilanjutkan dengan shading.</dd><dt>Revisi</dt><dd>Di halaman perkenalan ratu, sudut kamera dijauhkan dan proporsi ratu disesuaikan atas masukan dosen.</dd></dl>
+          </details>
+          <div class="links"><a href="#">Main di itch.io</a></div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="shot">Taruh gambar utama Wolf’s Chase di sini</div>
+        <div class="body">
+          <h3>Wolf’s Chase</h3>
+          <p>Game arcade yang terinspirasi dari Pac-Man.</p>
+          <ul class="meta"><li class="role">UI/UX</li><li class="role">Art main menu</li><li class="role">Banner</li><li class="role">Poster</li></ul>
+          <details>
+            <summary>Lihat proses</summary>
+            <dl><dt>Yang saya buat</dt><dd>Tombol main menu (Play, Setting, Exit), layar pemilihan level, serta background untuk keduanya.</dd><dt>Keputusan desain</dt><dd>Tata letak mengikuti pola game lain supaya terasa familiar dan pemain langsung tahu cara memakainya.</dd><dt>Key art</dt><dd>Banner dibuat dari art main menu, dengan suasana imut tapi tegang.</dd></dl>
+          </details>
+          <div class="links"><a href="#">Main di itch.io</a></div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="shot">Taruh gambar utama Between You and Me di sini</div>
+        <div class="body">
+          <h3>Between You and Me</h3>
+          <p>Game platformer yang dibuat untuk game jam internal 2026.</p>
+          <ul class="meta"><li class="role">2D artist karakter</li></ul>
+          <details>
+            <summary>Lihat proses</summary>
+            <dl><dt>Yang saya buat</dt><dd>Dua karakter utama beserta animasi idle, walk, dan jump.</dd><dt>Proses</dt><dd>Dikerjakan dalam game jam 2 hari, langsung ke versi final. Animasi berpatokan pada template animasi.</dd></dl>
+          </details>
+          <div class="links"><a href="#">Main di itch.io</a></div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="shot">Taruh gambar utama Nicholas’s Flight di sini</div>
+        <div class="body">
+          <h3>Nicholas’s Flight</h3>
+          <p>Game puzzle berbasis waktu. Bantu Nicholas mencapai penerbangannya!</p>
+          <ul class="meta"><li class="role">Sprite puzzle</li></ul>
+          <details>
+            <summary>Lihat proses</summary>
+            <dl><dt>Yang saya buat</dt><dd>Objek puzzle berupa peralatan rumah tangga dalam gaya pixel art.</dd><dt>Detail</dt><dd>Ukuran beragam, dari 16x16 sampai 32x32, dengan outline pada objek.</dd></dl>
+          </details>
+          <div class="links"><a href="#">Main di itch.io</a></div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="shot">Taruh gambar utama Reach It di sini</div>
+        <div class="body">
+          <h3>Reach It</h3>
+          <p>Game absurd bertemakan jari yang ingin mencapai makanannya.</p>
+          <ul class="meta"><li class="role">UI/UX</li><li class="role">2D artist</li></ul>
+          <details>
+            <summary>Lihat proses</summary>
+            <dl><dt>Yang saya buat</dt><dd>Tombol main menu, yang saya pasang sendiri di game.</dd><dt>Visual</dt><dd>Menerapkan visual hierarchy pada tampilan menu agar elemen penting lebih menonjol.</dd></dl>
+          </details>
+          <div class="links"><a href="#">Main di itch.io</a></div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="shot">Taruh gambar utama Slide to Cave di sini</div>
+        <div class="body">
+          <h3>Slide to Cave</h3>
+          <p>Game puzzle dengan mekanik ice slide.</p>
+          <ul class="meta"><li class="role">Programmer (GameMaker)</li><li>Aset: CC0, bukan buatan saya</li></ul>
+          <details>
+            <summary>Lihat proses</summary>
+            <dl><dt>Sistem yang saya buat</dt><dd>Mekanik seperti ice slide puzzle: karakter meluncur sampai menabrak tembok. Ada sekitar 42 level, fitur quick restart, dan pemilihan level.</dd><dt>Kredit aset</dt><dd>Aset CC0 oleh <a href="https://kevins-moms-house.itch.io/fantasy">kevins-moms-house</a>.</dd></dl>
+          </details>
+          <div class="links"><a href="#">Main di itch.io</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- KARYA LAIN -->
+<section>
+  <div class="wrap">
+    <h2>Karya lain</h2>
+    <p class="lead">Gambar anime di waktu luang.</p>
+    <div class="others">
+      <div class="shot">Gambar 1</div>
+      <div class="shot">Gambar 2</div>
+      <div class="shot">Gambar 3</div>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+  <div class="wrap about">
+    <div>
+      <h2>Tentang</h2>
+      <!-- GANTI dengan ceritamu -->
+      <p>Saya Abi Bakri, mahasiswa gametech dari Jombang, Jawa Timur. Jenis game yang saya suka adalah grand strategy dan action platformer 2D. Sekarang saya terbuka untuk pekerjaan studio atau proyek indie.</p>
+    </div>
+    <div>
+      <h2>Keahlian</h2>
+      <ul>
+        <li>Pixel art isometrik dan aset environment</li>
+        <li>Desain karakter, UI/UX, key art, poster, dan komik</li>
+        <li>GameMaker (GML) dan modding C# di tModLoader</li>
+        <li>Tool: Aseprite</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="contact">
+    <div class="wrap">
+        <h2>Kontak</h2>
+        <p class="lead">Terbuka untuk pekerjaan studio, freelance, dan kolaborasi indie.</p>
+        <a href="mailto:abibakrikitkat@gmail.com">abibakrikitkat@gmail.com</a>
+        <a href="https://www.instagram.com/equin_ewings/">Instagram</a>
+        <a href="https://itch.io/profile/bakbakk21">itch.io</a>
+        <a href="https://github.com/">GitHub</a>
+        <!-- Opsional: <a href="assets/cv.pdf">Unduh CV (PDF)</a> -->
+    </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">© Abi Bakri</div>
+</footer>
+
+</body>
+</html>
