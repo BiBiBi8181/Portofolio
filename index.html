@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#15132c" name="theme-color"/><meta content="Portfolio of Abi Bakri, 2D game artist creating character art, UI, key art, pixel art, and indie games." name="description"/><title>Abi Bakri ✦ Artist Select</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;700&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><style>
+:root{--bg:#15132c;--bg2:#1d193c;--surface:#292348;--line:#625985;--ink:#f8f2ff;--muted:#c4b9dd;--lime:#c9adf6;--pink:#f3b1c5;--lav:#b9a0ec;--gold:#f2ca83;--display:'Pixelify Sans',monospace;--body:'Nunito Sans',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;background:repeating-linear-gradient(to bottom,transparent 0 5px,rgba(0,0,0,.045) 6px 7px);opacity:.48}a{color:inherit}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--lime);outline-offset:5px}img{max-width:100%;display:block}.pixel{image-rendering:pixelated}::selection{background:var(--lime);color:#111827}.container{width:min(1160px,calc(100% - 44px));margin-inline:auto}.display{font-family:var(--display)}.eyebrow{font:700 13px var(--display);letter-spacing:.18em;color:var(--lime)}
+.site-header{position:fixed;z-index:40;top:0;left:0;right:0;padding:14px 0;background:rgba(13,18,31,.79);border-bottom:1px solid #52617c77;backdrop-filter:blur(16px)}.header-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.logo{font:700 25px var(--display);text-decoration:none;white-space:nowrap}.logo .star{color:var(--lime)}.nav-links{display:flex;align-items:center;gap:clamp(9px,3vw,31px)}.nav-links a{font:700 13px var(--display);text-decoration:none;letter-spacing:.04em;color:#d6dfed;transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--lime)}.status{font:700 12px var(--display);padding:8px 12px;border:1px solid #667a77;background:#243a38;color:var(--lime);white-space:nowrap}.status:before{content:'●';padding-right:7px;animation:blink 1.5s infinite}@keyframes blink{50%{opacity:.2}}
+.hero{height:min(870px,100svh);min-height:680px;isolation:isolate;position:relative;overflow:hidden;display:flex;align-items:center;background:radial-gradient(ellipse at 74% 30%,#413a6e 0,#243b61 36%,#11192b 78%)}.scene{position:absolute;inset:0;overflow:hidden;z-index:-1}@keyframes bob{50%{translate:0 -17px}}.hero .container{position:relative;z-index:2;padding-top:55px}.hero-copy{max-width:730px}.top-chip{display:inline-flex;align-items:center;gap:12px;padding:8px 13px;border:1px solid #9daccb;background:#142236c9;font:15px var(--display);color:var(--gold);box-shadow:4px 4px 0 #101727}.hero h1{font:700 clamp(62px,10vw,132px)/.89 var(--display);letter-spacing:-.035em;margin:24px 0 20px;text-shadow:6px 8px 0 #101a2e}.hero h1 em{font-style:normal;color:var(--lime)}.hero-desc{font-size:clamp(17px,2vw,21px);max-width:565px;color:#ecf0f5;margin-bottom:30px;text-shadow:0 2px 16px #0c1327}.buttons{display:flex;flex-wrap:wrap;gap:14px}.game-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 21px;border:2px solid #0e1b2c;background:var(--lime);color:#172033;font:700 17px var(--display);text-decoration:none;box-shadow:5px 5px 0 #0c1729;transition:transform .18s,box-shadow .18s,background .18s}.game-btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 #0c1729}.game-btn.secondary{background:#283550;color:#fff;border-color:#aebfda}.game-btn.small{font-size:14px;padding:10px 15px}.hero-bottom{position:absolute;bottom:28px;left:0;width:100%;z-index:2}.hero-bottom .container{padding:0;display:flex;justify-content:space-between;gap:12px;align-items:end}.scroll-hint{font:13px var(--display);color:#bdc8db;letter-spacing:.1em}.scroll-hint b{color:var(--lime)}.coord{font:13px var(--display);color:#bdc8db}
+.marquee{padding:14px 0;border-top:2px solid #a8b8d2;border-bottom:2px solid #a8b8d2;background:#253653;color:#dcf8e3;overflow:hidden}.marquee-inner{display:flex;white-space:nowrap;gap:50px;animation:marquee 24s linear infinite;width:max-content;font:17px var(--display);letter-spacing:.05em}.marquee-inner span:before{content:'✦';color:var(--lime);padding-right:50px}@keyframes marquee{to{transform:translateX(-50%)}}
+.section{padding:112px 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:35px}.section h2{font:700 clamp(40px,6.4vw,75px)/.95 var(--display);margin:10px 0}.section-intro{max-width:530px;color:var(--muted);margin:12px 0 0;font-size:17px}.section-counter{font:15px var(--display);color:var(--lav)}.quests{background:linear-gradient(180deg,#101524,#192238);position:relative}.quests:before{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#a4baff08 1px,transparent 1px),linear-gradient(90deg,#a4baff08 1px,transparent 1px);background-size:50px 50px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}.filter{border:1px solid #586b87;background:#222d42;color:#c7d6eb;padding:9px 15px;font:700 13px var(--display);transition:.2s}.filter.active,.filter:hover{background:var(--lime);color:#192437;border-color:var(--lime)}.quest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}.quest-card{background:#202b43;border:1px solid #617293;box-shadow:6px 6px 0 #0b1223;overflow:hidden;cursor:pointer;transition:transform .25s,box-shadow .25s;min-width:0}.quest-card:hover,.quest-card:focus-visible{transform:translate(-3px,-5px);box-shadow:9px 11px 0 #0b1223}.quest-card[hidden]{display:none}.quest-poster{position:relative;aspect-ratio:1.24;overflow:hidden;background:radial-gradient(circle at 50% 40%,#526481,#303a56)}.quest-poster img{width:100%;height:100%;object-fit:cover;transition:transform .6s;image-rendering:auto}.quest-poster img.pixel{image-rendering:pixelated}.quest-card:hover .quest-poster img{transform:scale(1.07)}.poster-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#111a2a8c;opacity:0;transition:opacity .2s}.quest-card:hover .poster-overlay,.quest-card:focus-visible .poster-overlay{opacity:1}.poster-overlay span{font:20px var(--display);color:#111b2a;background:var(--lime);padding:11px 16px;transform:translateY(10px);transition:transform .25s}.quest-card:hover .poster-overlay span{transform:translateY(0)}.quest-info{padding:21px}.quest-id{display:flex;justify-content:space-between;gap:4px;font:12px var(--display);color:var(--lav);letter-spacing:.06em}.quest-id span{color:var(--lime)}.quest-info h3{font:700 29px/1.06 var(--display);margin:13px 0 9px}.quest-info p{font-size:14px;color:#bdc8da;margin:0 0 15px;min-height:45px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{font:11px var(--display);padding:4px 7px;border:1px solid #60708a;color:#d3dbee}.tags span:first-child{border-color:var(--lav);color:#dfd8ff}.quest-details{display:none}
+.collection{background:#1b2538}.art-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:18px}.art-piece{overflow:hidden;position:relative;aspect-ratio:4/5;background:#303e56;border:1px solid #5d718a;cursor:zoom-in}.art-piece img{width:100%;height:100%;object-fit:cover;transition:transform .65s}.art-piece:hover img{transform:scale(1.06)}.art-piece:after{content:'VIEW ART ✧';position:absolute;bottom:15px;left:15px;padding:8px 11px;background:#172137d9;border:1px solid #9daec8;font:13px var(--display)}
+.about-section{background:#101827}.about-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:80px}.about-layout p{color:#c8d3e2;font-size:18px;max-width:600px}.skill-list{list-style:none;padding:0;margin:0;display:grid;gap:11px}.skill-list li{background:#1c2940;border-left:4px solid var(--lav);padding:12px 16px;font-size:14px}.skill-list li:before{content:'✦ ';color:var(--lime)}.contact-section{padding:100px 0;background:radial-gradient(ellipse at 50% 0,#394564,#182339 65%);text-align:center}.contact-section h2{font:700 clamp(45px,8vw,88px)/.9 var(--display);margin:15px 0 25px}.contact-section p{color:#becbdc}.socials{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:25px}.socials a{border:1px solid #7890ad;padding:10px 15px;text-decoration:none;font:15px var(--display);background:#26344c;transition:.2s}.socials a:hover{background:var(--lime);color:#182035}.footer{padding:25px 0;border-top:1px solid #374963;color:#9aabc3;font:13px var(--display)}.footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.dialog-backdrop{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;background:#050911df;padding:20px;backdrop-filter:blur(9px)}.dialog-backdrop.open{display:flex}.dialog{position:relative;width:min(880px,100%);max-height:min(88vh,900px);background:#202b43;border:2px solid #a3b2d2;box-shadow:9px 9px 0 #090f1e;overflow:auto}.dialog-head{position:sticky;top:0;background:#152139;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #697a98;z-index:1}.dialog-head strong{font:17px var(--display);color:var(--lime)}.close{background:#f8bacf;color:#172238;border:0;font:19px var(--display);padding:3px 13px}.dialog-content{padding:25px}.dialog-content h2{font:700 clamp(33px,5vw,52px)/1 var(--display);margin:0 0 20px}.dialog-content img{max-height:420px;object-fit:contain;margin:16px auto;cursor:zoom-in}.dialog-content details{margin-top:21px;border-top:1px dashed #8091ae;padding-top:15px}.dialog-content summary{font:19px var(--display);color:var(--lime);cursor:pointer}.dialog-content dl{display:grid;gap:6px}.dialog-content dt{font-weight:800;color:var(--pink);margin-top:12px}.dialog-content dd{margin:0;color:#d3dfeb}.dialog-content .play-link{display:inline-block;color:#132030;background:var(--lime);padding:10px 17px;text-decoration:none;font:18px var(--display);margin-top:20px}.lightbox{z-index:95}.lightbox img{max-height:85vh;max-width:95vw;object-fit:contain}.lightbox .close{position:absolute;top:16px;right:16px;z-index:2}
+.cursor-dot,.cursor-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:110;border-radius:50%;display:none}.cursor-dot{height:8px;width:8px;background:var(--lime);transform:translate(-50%,-50%)}.cursor-ring{height:33px;width:33px;border:1px solid var(--lime);transform:translate(-50%,-50%);transition:width .18s,height .18s,background .18s}.cursor-ring.hover{width:65px;height:65px;background:#c9f27a20}.spark{position:fixed;z-index:111;pointer-events:none;width:6px;height:6px;background:var(--gold);animation:particle .65s ease-out forwards}@keyframes particle{to{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(160deg)}}.reveal{opacity:0;transform:translateY(35px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}.easter-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(140px);background:#c9f27a;color:#172334;padding:12px 18px;font:18px var(--display);z-index:120;transition:transform .4s;box-shadow:5px 5px 0 #0a1020;text-align:center}.easter-toast.show{transform:translateX(-50%) translateY(0)}.gem-button{background:none;border:0;color:inherit;font:inherit;padding:0;cursor:pointer}
+@media(pointer:fine) and (prefers-reduced-motion:no-preference){body,button,a,.quest-card{cursor:none}.cursor-dot,.cursor-ring{display:block}}@media(max-width:920px){.quest-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:clamp(64px,11vw,108px)}.sprite{right:8%;opacity:.7}.about-layout{gap:35px}}@media(max-width:640px){.container{width:min(100% - 28px,1160px)}.site-header{padding:9px 0}.header-inner{flex-wrap:wrap;gap:5px}.logo{font-size:21px}.status{font-size:10px}.nav-links{width:100%;justify-content:space-between;order:3}.nav-links a{font-size:12px}.hero{height:760px;min-height:670px;align-items:flex-start}.hero .container{padding-top:160px}.hero h1{font-size:clamp(62px,15vw,90px)}.hero-desc{font-size:16px}.moon{width:110px;right:13%;top:17%}.sprite{right:4%;scale:.64;transform-origin:bottom right;opacity:.9}.floating-gem{right:12%;top:49%}.hero-bottom{bottom:18px}.section{padding:78px 0}.section-heading{align-items:start;flex-direction:column}.quest-grid{grid-template-columns:1fr}.art-grid{grid-template-columns:1fr 1fr}.art-piece:first-child{grid-column:1/-1;aspect-ratio:1.5}.about-layout{grid-template-columns:1fr}.dialog-content{padding:17px}.footer .container{flex-direction:column}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+
+/* NIGHT GALLERY — art direction: 60% deep indigo, 30% lavender, 10% gold/pink. */
+body{background:#15132c}
+.site-header{background:rgba(21,19,44,.87);border-bottom-color:#8675ad55}
+.status{background:#2a244c;border-color:#8575a9;color:var(--gold)}
+.status:before{color:var(--pink)}
+.hero{height:auto;min-height:800px;display:block;padding:110px 0 40px;background:radial-gradient(ellipse at 51% 28%,#564579 0%,#2b244f 43%,#15132c 87%)}
+.hero .scene{z-index:-1}
+.moon{width:115px;top:14%;right:12%;background:#f2d6be;box-shadow:0 0 100px #d5b2ff55,0 0 0 25px #eed8fa09}
+.hanging-stage{display:grid;grid-template-columns:minmax(110px,1fr) minmax(280px,460px) minmax(140px,1fr);align-items:start;gap:clamp(10px,3vw,34px);min-height:510px;position:relative;isolation:isolate}
+.hanging-stage [data-depth]{transition:transform .35s ease-out}
+.hanging-support{display:flex;flex-direction:column;align-items:center;position:relative}
+.hanging-cord{width:3px;height:clamp(65px,10vw,140px);background:repeating-linear-gradient(to bottom,#e5bd82 0 9px,#715786 9px 13px);box-shadow:2px 0 #1b1538}
+.charm-support{padding-top:45px}.charm-medallion{position:relative;width:80px;height:80px;border:6px solid #d8ad74;outline:3px solid #4a345c;border-radius:16px;background:#342855;box-shadow:0 8px 0 #17132b,0 0 30px #d0b0ef44;color:var(--gold);font:44px var(--display);animation:charmFloat 5.5s ease-in-out infinite;transform-origin:top center;cursor:pointer}
+.charm-moon{position:absolute;font-size:16px;right:7px;bottom:0;color:#f3b1c5}
+.charm-medallion:hover{filter:brightness(1.25)}
+.portrait-unit{position:relative;display:flex;flex-direction:column;align-items:center;transform-origin:50% 0}
+.portrait-cords{display:flex;gap:clamp(135px,19vw,235px);height:58px;justify-content:center}
+.portrait-cords i{display:block;width:4px;height:65px;background:repeating-linear-gradient(to bottom,#dfb583 0 12px,#78618e 12px 16px);box-shadow:2px 0 #171329}
+/* Rope extensions: run up to and behind the top of the scene, without a visible cut-off. */
+.hanging-cord,.portrait-cords i{position:relative;flex-shrink:0}
+.hanging-cord::before,.portrait-cords i::before{content:"";position:absolute;bottom:100%;left:0;width:100%;height:110vh;background:inherit;box-shadow:inherit;pointer-events:none}
+
+.portrait-frame{position:relative;width:100%;max-width:460px;margin:0;border:12px solid #a87e74;outline:5px solid #3b285a;background:#2c244a;padding:11px 11px 0;box-shadow:inset 0 0 0 4px #f2ca83,0 18px 0 #100d26,0 25px 55px #08051699;animation:frameSway 7s ease-in-out infinite;transform-origin:50% -58px}
+.portrait-frame:before{content:'✦';position:absolute;top:-23px;left:calc(50% - 18px);width:36px;height:30px;text-align:center;color:#f6d59c;background:#6b5372;border:3px solid #d7a97d;font:22px var(--display);z-index:2}
+.portrait-mat{aspect-ratio:1/1;background:radial-gradient(circle at 70% 20%,#4d3e79,#201b3c 65%);border:5px solid #e0c396;overflow:hidden}
+.portrait-mat img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated}
+.portrait-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#ebd8fa;text-align:center;font:700 18px/1.5 var(--display);letter-spacing:.04em;padding:15px}
+.portrait-placeholder[hidden]{display:none}.placeholder-moon{font-size:80px;color:#f2ca83;text-shadow:0 0 40px #d4abf4}.portrait-placeholder small{font:12px var(--body);color:#e8bfab}
+.portrait-frame figcaption{color:#f2d9ac;text-align:center;font:700 13px var(--display);letter-spacing:.09em;padding:14px 0}
+.plaque-support{padding-top:85px}.artist-plaque{border:5px solid #b88d7a;background:#31264e;box-shadow:7px 9px 0 #16112e,inset 0 0 0 2px #e5c58b;padding:20px 12px;text-align:center;min-width:155px;transform:rotate(3deg)}.artist-plaque span{display:block;font:11px var(--display);color:var(--gold)}.artist-plaque strong{display:block;color:#f6d9ff;font:700 clamp(20px,2.8vw,32px)/1.1 var(--display);margin:12px 0}.artist-plaque small{color:#ddd0f3;font:11px/1.6 var(--display)}
+.stage-caption{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}.stage-caption p{font:clamp(17px,2vw,23px) var(--display);color:#eee1fb;margin:0}.stage-caption .scroll-hint{margin-top:12px;color:#bfa9de}
+.game-btn{background:var(--gold);border-color:#241833;color:#251a3e}.game-btn.secondary{background:#382e5a;border-color:#b6a1d6;color:#f7efff}
+.logo .star,.nav-links a:hover,.nav-links a.active,.eyebrow,.scroll-hint b{color:var(--gold)}
+.marquee{background:#302750;border-color:#8f79b1;color:#f5e7ff}.marquee-inner span:before{color:var(--gold)}
+.quests{background:linear-gradient(180deg,#15132c,#211b3e)}.collection{background:#241d41}.quest-card{background:#2c2549;border-color:#786796}.quest-id span{color:var(--gold)}.filter.active,.filter:hover,.poster-overlay span{background:var(--gold);border-color:var(--gold);color:#2d2045}.quest-poster{background:#3b3259}.art-piece{background:#3b315a;border-color:#8571a7}
+@keyframes frameSway{0%,100%{rotate:-.8deg}50%{rotate:.8deg}}@keyframes charmFloat{0%,100%{rotate:-3deg}50%{rotate:3deg}}
+@media(max-width:760px){.hero{min-height:0;padding-top:150px}.hanging-stage{grid-template-columns:1fr minmax(190px,2.4fr) 1fr;gap:7px;min-height:0;margin-bottom:30px}.portrait-cords{height:40px;gap:100px}.portrait-cords i{height:47px}.portrait-frame{border-width:7px;padding:5px 5px 0}.portrait-mat{border-width:3px}.portrait-frame figcaption{font-size:8px}.charm-support{padding-top:60px}.plaque-support{padding-top:83px}.hanging-cord{height:55px}.charm-medallion{width:48px;height:48px;font-size:27px;border-width:3px;border-radius:8px}.charm-moon{font-size:10px}.artist-plaque{min-width:0;padding:9px 5px;border-width:3px}.artist-plaque strong{font-size:clamp(11px,2.8vw,18px)}.artist-plaque span,.artist-plaque small{font-size:7px}.portrait-placeholder{font-size:10px}.placeholder-moon{font-size:38px}.stage-caption{padding-bottom:25px}.stage-caption .buttons{justify-content:center}.moon{width:80px;right:5%}}
+@media(prefers-reduced-motion:reduce){.portrait-frame,.charm-medallion{animation:none}.hanging-stage [data-depth]{transition:none}}
+
+/* EQUINEWINGS CUSTOM SCENE — replaceable art layers */
+:root{--bg:#17132d;--bg2:#211b3e;--surface:#2a224a;--line:#665886;--lime:#d6b7f7;--lav:#b79bdf;--gold:#f2ca83;--pink:#f3b1c5}
+.site-header{background:rgba(19,15,43,.88);border-bottom:1px solid rgba(207,180,244,.28);box-shadow:0 5px 25px #0b09225c}.nav-links a{color:#e7dbfc}.status{background:#302345;color:var(--gold);border-color:#68577c}
+.hero{height:min(900px,100svh);min-height:680px;background:radial-gradient(ellipse at 72% 35%,#3d315b 0,#201a3d 50%,#100f25 100%);align-items:initial;padding:0;isolation:isolate}
+.hero .scene{z-index:-1;pointer-events:none}.scene-layer{pointer-events:none;will-change:transform}.scene .sky-art{position:absolute;inset:0;background-image:url('assets/sky-night.png');background-position:center;background-size:cover;opacity:.85}
+.scene .stars-art{position:absolute;inset:-5%;background:url('assets/stars.png') center/cover no-repeat;opacity:.85}
+.scene .moon{top:16%;right:13%;width:clamp(95px,13vw,170px);background:#e7d4f4 url('assets/moon.png') center/contain no-repeat;box-shadow:0 0 85px #d5a8fb55,0 0 0 22px #d5a8fb0b}
+.scene .moon:after{display:none}.scene .cloud{border-radius:0;filter:none;opacity:.42;background-color:transparent;background-size:contain;background-repeat:no-repeat;background-position:center;animation:cloud-drift 26s ease-in-out infinite alternate}
+.scene .ground{height:7%;background:linear-gradient(#231c3b,#141126);border-top:3px solid #8f78b183}
+@keyframes twinkle{50%{opacity:.32}100%{opacity:.66}}@keyframes cloud-drift{to{translate:42px 3px}}
+.hanging-strings{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}.hanging-strings line{stroke:var(--gold);stroke-width:2.5;stroke-linecap:round;filter:drop-shadow(0 1px 2px #121020)}.hanging-strings circle{fill:#f6dfab}
+.hanger-stage{position:relative;z-index:4;height:100%;display:grid;grid-template-columns:minmax(90px,1fr) minmax(250px,1.35fr) minmax(230px,1.3fr);align-items:center;column-gap:clamp(14px,3vw,48px);padding-top:82px;padding-bottom:60px;pointer-events:none}
+.hanger{pointer-events:auto;position:relative;justify-self:center;touch-action:pan-y;cursor:grab;user-select:none;transform:translate3d(var(--pull-x,0px),var(--pull-y,0px),0) rotate(var(--pull-angle,0deg));transform-origin:50% 0;will-change:transform;filter:drop-shadow(0 17px 12px #0b0a2099)}.hanger.is-dragging{cursor:grabbing;z-index:8}.hanger :is(img,figure){user-select:none;-webkit-user-drag:none}.hanger-star{align-self:start;margin-top:clamp(190px,27vh,290px)}.hanger-star .hanger-content{width:clamp(65px,9vw,108px);aspect-ratio:1;display:grid;place-items:center;filter:drop-shadow(0 0 22px #f2ca8366)}.asset-star{height:100%;width:100%;object-fit:contain}
+.hanger-portrait{width:min(100%,350px);align-self:start;margin-top:clamp(145px,22vh,225px)}.portrait-tile{margin:0}.portrait-image{aspect-ratio:1;background:#33274c;overflow:hidden;border:3px solid #d7bdf0;box-shadow:0 0 0 5px #2a2044,0 0 40px #9e76cc34}.portrait-image img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated}.portrait-tile figcaption{margin-top:13px;text-align:center;color:var(--gold);font:clamp(14px,2vw,20px) var(--display);letter-spacing:.02em;text-shadow:0 3px 8px #17132d}
+.hanger-intro{width:min(100%,365px);align-self:start;margin-top:clamp(180px,26vh,270px)}.intro-art-panel{min-height:215px;position:relative;border:2px solid #ab90d5;background:#2b2248e8;box-shadow:7px 7px 0 #15112f,0 12px 30px #08071944;padding:25px 23px}.intro-panel-art{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:0}.intro-panel-copy{position:relative;z-index:1}.intro-panel-copy h1{font:700 clamp(30px,4vw,48px)/1.05 var(--display);margin:9px 0;color:#fff5ff}.intro-panel-copy p{font-size:15px;color:#ecddff;margin:8px 0 20px}.intro-actions{display:flex;flex-wrap:wrap;gap:9px}.intro-actions .game-btn{font-size:12px;padding:9px 11px}.game-btn{background:var(--lav);color:#211630;border-color:#24192e}.game-btn.secondary{background:#2e264b;border-color:#a48dcb}
+.hero-footer{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;display:flex;justify-content:space-between;gap:14px;font:12px var(--display);letter-spacing:.08em;color:#d7c2f7;pointer-events:none}.hero-footer a{pointer-events:auto;text-decoration:none;color:var(--gold)}
+.quests{background:linear-gradient(#17132d,#211b3e)}.collection{background:#251f40}.quest-card{background:#2b2545;border-color:#7e6c9c}.quest-poster{background:#403459}.filter{background:#302845;border-color:#72618c;color:#e1d4ef}.filter.active,.filter:hover{background:var(--lav);color:#20162b}
+@media(max-width:850px){.hero{min-height:820px;height:auto}.hanger-stage{min-height:820px;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;align-items:start;padding-top:118px;gap:0 15px}.hanger-portrait{grid-column:1/-1;grid-row:1;width:min(56vw,270px);margin-top:40px}.hanger-star{grid-column:1;grid-row:2;margin-top:-35px}.hanger-star .hanger-content{width:72px}.hanger-intro{grid-column:2;grid-row:2;margin-top:-50px;width:100%}.intro-art-panel{padding:15px;min-height:185px}.intro-panel-copy h1{font-size:30px}.intro-panel-copy p{font-size:13px}.hero-footer{font-size:10px}.scene .moon{top:13%;right:6%}}
+@media(max-width:500px){.hero{min-height:870px}.hanger-stage{min-height:870px;grid-template-columns:90px minmax(0,1fr);padding-top:110px}.hanger-portrait{width:min(70vw,290px)}.hanger-star{margin-top:0}.hanger-intro{margin-top:0}.intro-actions .game-btn{font-size:11px}.intro-panel-copy h1{font-size:26px}.hero-footer{bottom:12px;flex-direction:column;align-items:center;text-align:center}.hero-footer span{display:none}}
+@media(prefers-reduced-motion:reduce){.scene .cloud,.scene .stars{animation:none}.hanger{transition:none}}
+
+/* CUSTOM ART — PROPORTIONAL LAYERS (1920x1080 reference design).
+   All art URLs unchanged. Adjust the variables below to fine-tune composition. */
+:root{
+  --moon-x:12%; --moon-y:16%; --moon-size:clamp(118px,13vw,190px);
+  --far-cloud-width:clamp(280px,29vw,510px);
+  --mid-cloud-width:clamp(330px,34vw,600px);
+  --mountain-scale:100%; /* image width relative to viewport */
+  --mountain-rise:0px; /* positive raises all three mountain bands */
+}
+.hero{background:#17132d}
+.scene{position:absolute;inset:0;overflow:hidden}
+.scene .sky-art{position:absolute;inset:0;background:#231d43 url("assets/sky-night.png") center/cover no-repeat;opacity:1}
+.scene .stars{display:none!important}
+.scene .stars-art{position:absolute;inset:0;background:url("assets/stars.png") center/cover no-repeat;opacity:.78;animation:stars-breathe 9s ease-in-out infinite alternate}
+@keyframes stars-breathe{to{opacity:.55}}
+/* Force the moon's placement — independent of background cropping. */
+.scene .moon{position:absolute;left:auto;bottom:auto;top:var(--moon-y);right:var(--moon-x);width:var(--moon-size);height:var(--moon-size);aspect-ratio:1;border:0;border-radius:0;background:transparent url("assets/moon.png") center/contain no-repeat;box-shadow:none;clip-path:none;filter:drop-shadow(0 0 20px rgba(194,157,247,.35))}
+.scene .moon::after{display:none}
+/* Their PNGs are 1200x350, so scale the whole image uniformly. */
+.scene .cloud{position:absolute;left:auto;right:auto;bottom:auto;height:auto;aspect-ratio:1200/350;border:0;border-radius:0;clip-path:none;filter:none;opacity:.85;background-color:transparent;background-position:center;background-size:contain;background-repeat:no-repeat;animation:cloud-drift 26s ease-in-out infinite alternate}
+.scene .cloud.one{top:26%;right:2%;width:var(--far-cloud-width);background-image:url("assets/clouds-far.png")}
+.scene .cloud.two{top:41%;left:2%;width:var(--mid-cloud-width);background-image:url("assets/clouds-mid.png");animation-duration:21s;animation-direction:alternate-reverse}
+@keyframes cloud-drift{to{translate:28px 3px}}
+/* The artwork is NOT stretched. Background image has its own intrinsic
+   1920px-wide proportions. We use a full-height layer so transparent pixels
+   in the art do not squeeze the visible mountains to the bottom. */
+.scene .hills,.scene .hills.back,.scene .hills.front{
+  position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;
+  clip-path:none;border:0;border-radius:0;opacity:1;background-color:transparent;
+  background-repeat:no-repeat;background-size:var(--mountain-scale) auto;
+  background-position:center calc(100% - var(--mountain-rise));
+}
+.scene .hills.back{background-image:url("assets/mountains-far.png")}
+.scene .hills:not(.back):not(.front){background-image:url("assets/mountains-mid.png")}
+.scene .hills.front{background-image:url("assets/mountains-front.png")}
+.scene .ground{display:none}
+@media(max-width:640px){
+  :root{--moon-x:6%;--moon-y:15%;--moon-size:100px;--far-cloud-width:55vw;--mid-cloud-width:65vw;--mountain-scale:175%}
+  .scene .cloud.one{right:-10%;top:24%}
+  .scene .cloud.two{left:-15%;top:50%}
+}
+@media(prefers-reduced-motion:reduce){.scene .stars-art,.scene .cloud{animation:none}}
+/* Keep the introduction card drawn entirely with CSS. */
+.intro-art-panel{background:linear-gradient(145deg,rgba(58,42,91,.96),rgba(29,24,56,.96));border:2px solid #b7a0de;border-radius:10px;box-shadow:0 0 0 4px #211a3c,7px 8px 0 #0c0b24,0 15px 45px rgba(5,4,18,.5)}
+/* Accessible CSS-made game HUD, no image asset needed. */
+.site-header{padding:12px 0;background:rgba(24,18,49,.76);border-bottom:1px solid rgba(211,183,244,.27);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.header-inner{background:linear-gradient(135deg,rgba(66,48,98,.78),rgba(29,24,60,.83));border:1px solid rgba(220,194,255,.38);border-radius:13px;padding:11px 19px;box-shadow:0 8px 28px #08071960,inset 0 1px #eddcff22}
+.nav-links a{padding:9px 11px;border-radius:8px;transition:background .2s,color .2s,transform .2s}
+.nav-links a:hover,.nav-links a.active{color:#f2ca83;background:#a58cc920;transform:translateY(-2px)}
+.logo{color:#faf1ff}.logo .star{padding:0 5px;color:#f2ca83}
+.status{border-radius:8px;background:#48365699;border-color:#ab90d5;color:#f2ca83}
+.portrait-image{border:2px solid rgba(210,183,246,.52);box-shadow:0 8px 35px #0b092788;background:transparent}
+@media(max-width:640px){.header-inner{padding:10px 12px;gap:8px}.nav-links a{padding:7px 4px}}
+@media(prefers-reduced-motion:reduce){.scene .stars-art,.scene .cloud{animation:none}}
+
+/* PARALLAX FIX — ample overscan keeps image edges outside the viewport.
+   Original image ratios remain intact; no artwork needs redrawing. */
+.scene{overflow:hidden}
+.scene .sky-art{inset:-4%;background-size:cover;transform-origin:center}
+.scene .stars-art{inset:-7%;background-size:cover;transform-origin:center}
+/* Mountains use a slightly oversized scene-wide background.  No clipping polygons. */
+.scene .hills,.scene .hills.back,.scene .hills.front{
+  left:-7%;right:-7%;top:-5%;bottom:-5%;width:114%;height:110%;
+  background-size:100% auto;background-position:center bottom;
+  transform-origin:center bottom;
+}
+/* Moon is a separate transparent PNG, without a white circular fallback. */
+.scene .moon{background-color:transparent;background-image:url('assets/moon.png');background-size:contain;background-position:center;background-repeat:no-repeat}
+/* Leave room for cloud drift and pointer parallax, without exposing cloud container edges. */
+.scene .cloud{background-size:contain}
+@media(max-width:640px){
+  .scene .hills,.scene .hills.back,.scene .hills.front{left:-46%;right:-46%;width:192%;top:-4%;bottom:-4%;height:108%;background-size:100% auto}
+  .scene .sky-art,.scene .stars-art{inset:-10%}
+}
+</style></head><body>
+<header class="site-header"><div class="container header-inner"><a class="logo" href="#home">ABI<span class="star">✦</span>BAKRI</a><nav aria-label="Main navigation" class="nav-links"><a href="#quests">01 / QUESTS</a><a href="#gallery">02 / GALLERY</a><a href="#about">03 / ABOUT</a><a href="#contact">04 / CONTACT</a></nav><span class="status">AVAILABLE FOR WORK</span></div></header>
+<main><section aria-label="Interactive night sky portfolio" class="hero" id="home">
+<div aria-hidden="true" class="scene">
+<div class="scene-layer sky-art" data-depth=".018"></div>
+<div class="scene-layer stars-art" data-depth=".055"></div>
+<div class="scene-layer moon" data-depth=".085"></div>
+<div class="scene-layer cloud cloud-far one" data-depth=".12"></div>
+<div class="scene-layer cloud cloud-mid two" data-depth=".19"></div>
+<div class="scene-layer hills back" data-depth=".07"></div>
+<div class="scene-layer hills" data-depth=".13"></div>
+<div class="scene-layer hills front" data-depth=".19"></div>
+</div>
+<svg aria-hidden="true" class="hanging-strings" id="hangingStrings" preserveaspectratio="none"><g id="stringLines"></g></svg>
+<div class="hanger-stage container">
+<div aria-label="Pull the hanging star charm; press Enter to discover a secret" class="hanger hanger-star" data-max="115" data-pull="star" role="button" tabindex="0">
+<div class="hanger-content"><img alt="" class="asset-star pixel" src="assets/star-charm.png"/></div>
+</div>
+<div aria-label="Pullable artwork of Mischevious Little Stella" class="hanger hanger-portrait" data-max="85" data-pull="portrait">
+<figure class="portrait-tile"><div class="portrait-image"><img alt="Mischevious Little Stella, a pixel-art girl in a night setting" class="pixel" src="assets/portrait.png"/></div><figcaption>Mischevious Little Stella</figcaption></figure>
+</div>
+<div aria-label="Pullable introduction panel" class="hanger hanger-intro" data-max="70" data-pull="intro">
+<div class="intro-art-panel"><div class="intro-panel-copy"><span class="eyebrow">✧ PLAYER 01 ✧</span><h1>Abi Bakri</h1><p>2D game artist crafting characters, pixel worlds, and playful interfaces.</p><div class="intro-actions"><a class="game-btn small" href="#quests">EXPLORE WORK ↗</a><a class="game-btn small secondary" href="#contact">CONTACT ↗</a></div></div></div>
+</div>
+</div>
+<div class="hero-footer container"><span>✦ CLICK + DRAG THE HANGING OBJECTS</span><a href="#quests">SCROLL TO QUESTS ↓</a></div>
+</section>
+<div aria-hidden="true" class="marquee"><div class="marquee-inner"><span>CHARACTER ART · UI/UX · PIXEL ART · KEY ART · GAME DESIGN</span><span>CHARACTER ART · UI/UX · PIXEL ART · KEY ART · GAME DESIGN</span><span>CHARACTER ART · UI/UX · PIXEL ART · KEY ART · GAME DESIGN</span><span>CHARACTER ART · UI/UX · PIXEL ART · KEY ART · GAME DESIGN</span></div></div>
+<section class="section quests" id="quests"><div class="container"><div class="section-heading reveal"><div><span class="eyebrow">✦ THE QUEST BOARD</span><h2>SELECT A QUEST</h2><p class="section-intro">Every project has its own story. Pick a card to see the work, the process, and what I contributed.</p></div><span class="section-counter">06 COMPLETED QUESTS</span></div><div aria-label="Filter projects" class="filters reveal"><button aria-pressed="true" class="filter active" data-filter="all">ALL QUESTS</button><button aria-pressed="false" class="filter" data-filter="illustration">ILLUSTRATION</button><button aria-pressed="false" class="filter" data-filter="ui">UI / UX</button><button aria-pressed="false" class="filter" data-filter="character">CHARACTERS</button><button aria-pressed="false" class="filter" data-filter="pixel">PIXEL ART</button><button aria-pressed="false" class="filter" data-filter="code">GAME DEV</button></div><div class="quest-grid"><article aria-label="Explore Honey War" class="quest-card reveal" data-category="illustration" data-index="0" tabindex="0">
+<div class="quest-poster"><img alt="Poster Honey War" class="" loading="lazy" src="assets/honey-war-cover.jpg"/><div class="poster-overlay"><span>OPEN QUEST ↗</span></div></div>
+<div class="quest-info"><div class="quest-id">QUEST 01 <span>● COMPLETE</span></div><h3>Honey War</h3><p>Game strategi tower defense. Lindungi koloni lebahmu!</p><div class="tags"><span>Banner</span><span>Poster</span><span>Art main menu</span><span>Komik opening</span></div></div>
+<div class="quest-details" hidden=""><details>
+<summary>Lihat proses</summary>
+<dl><dt>Brief</dt><dd>Game designer meminta character concept yang lucu dan imut.</dd><dt>Yang saya buat</dt><dd>Character concept, banner, poster, art main menu, dan komik opening 5 halaman tentang peternak lebah yang disengat lalu terbangun di kerajaan lebah.</dd><dt>Proses</dt><dd>Warna dasar (flat color), dilanjutkan dengan shading.</dd><dt>Revisi</dt><dd>Di halaman perkenalan ratu, sudut kamera dijauhkan dan proporsi ratu disesuaikan atas masukan dosen.</dd></dl> <img alt="Flat color karakter" src="assets/honey-war-flat.jpg"> <img alt="Karakter setelah shading" src="assets/honey-war-shading.jpg"> <img alt="Komik opening halaman 1" src="assets/honey-war-comic-1.jpg"/> <img alt="Komik opening halaman 2" src="assets/honey-war-comic-2.jpg"/>
+</img></img></details><a class="play-link" href="https://elcodante.itch.io/wpg-3" rel="noopener noreferrer" target="_blank">Play on itch.io ↗</a></div>
+</article>
+<article aria-label="Explore Wolf’s Chase" class="quest-card reveal" data-category="ui" data-index="1" tabindex="0">
+<div class="quest-poster"><img alt="Art main menu Wolf’s Chase" class="" loading="lazy" src="assets/wolfs-chase-cover.jpg"/><div class="poster-overlay"><span>OPEN QUEST ↗</span></div></div>
+<div class="quest-info"><div class="quest-id">QUEST 02 <span>● COMPLETE</span></div><h3>Wolf’s Chase</h3><p>Game arcade yang terinspirasi dari Pac-Man.</p><div class="tags"><span>UI/UX</span><span>Art main menu</span><span>Banner</span><span>Poster</span></div></div>
+<div class="quest-details" hidden=""><details>
+<summary>Lihat proses</summary>
+<dl><dt>Yang saya buat</dt><dd>Tombol main menu (Play, Setting, Exit), layar pemilihan level, serta background untuk keduanya.</dd><dt>Keputusan desain</dt><dd>Tata letak mengikuti pola game lain supaya terasa familiar dan pemain langsung tahu cara memakainya.</dd><dt>Key art</dt><dd>Banner dibuat dari art main menu, dengan suasana imut tapi tegang.</dd></dl> <img alt="Layar pemilihan level" src="assets/wolfs-chase-levels.jpg"> <img alt="Banner Wolf’s Chase" src="assets/wolfs-chase-banner.jpg"/>
+</img></details><a class="play-link" href="https://elcodante.itch.io/the-wolfs-chase" rel="noopener noreferrer" target="_blank">Play on itch.io ↗</a></div>
+</article>
+<article aria-label="Explore Between You and Me" class="quest-card reveal" data-category="character" data-index="2" tabindex="0">
+<div class="quest-poster"><img alt="Dua karakter utama Between You and Me" class="" loading="lazy" src="assets/between-cover.jpg"/><div class="poster-overlay"><span>OPEN QUEST ↗</span></div></div>
+<div class="quest-info"><div class="quest-id">QUEST 03 <span>● COMPLETE</span></div><h3>Between You and Me</h3><p>Game platformer yang dibuat untuk game jam internal 2026.</p><div class="tags"><span>2D artist karakter</span></div></div>
+<div class="quest-details" hidden=""><details>
+<summary>Lihat proses</summary>
+<dl><dt>Yang saya buat</dt><dd>Dua karakter utama beserta animasi idle, walk, dan jump.</dd><dt>Proses</dt><dd>Dikerjakan dalam game jam 2 hari, langsung ke versi final. Animasi berpatokan pada template animasi.</dd></dl>
+</details><a class="play-link" href="https://mr-mazoken.itch.io/between-you-and-me" rel="noopener noreferrer" target="_blank">Play on itch.io ↗</a></div>
+</article>
+<article aria-label="Explore Nicholas’s Flight" class="quest-card reveal" data-category="pixel" data-index="3" tabindex="0">
+<div class="quest-poster"><img alt="Objek pixel art Nicholas’s Flight" class="pixel" loading="lazy" src="assets/nicholas-cover.jpg"/><div class="poster-overlay"><span>OPEN QUEST ↗</span></div></div>
+<div class="quest-info"><div class="quest-id">QUEST 04 <span>● COMPLETE</span></div><h3>Nicholas’s Flight</h3><p>Game puzzle berbasis waktu. Bantu Nicholas mencapai penerbangannya!</p><div class="tags"><span>Sprite puzzle</span></div></div>
+<div class="quest-details" hidden=""><details>
+<summary>Lihat proses</summary>
+<dl><dt>Yang saya buat</dt><dd>Objek puzzle berupa peralatan rumah tangga dalam gaya pixel art.</dd><dt>Detail</dt><dd>Ukuran beragam, dari 16x16 sampai 32x32, dengan outline pada objek.</dd></dl> <img alt="Sprite peralatan rumah tangga" class="pixel" src="assets/nicholas-objects.jpg">
+</img></details><a class="play-link" href="https://elcodante.itch.io/nicholas" rel="noopener noreferrer" target="_blank">Play on itch.io ↗</a></div>
+</article>
+<article aria-label="Explore Reach It" class="quest-card reveal" data-category="ui" data-index="4" tabindex="0">
+<div class="quest-poster"><img alt="Main menu Reach It" class="" loading="lazy" src="assets/reach-it-cover.jpg"/><div class="poster-overlay"><span>OPEN QUEST ↗</span></div></div>
+<div class="quest-info"><div class="quest-id">QUEST 05 <span>● COMPLETE</span></div><h3>Reach It</h3><p>Game absurd bertemakan jari yang ingin mencapai makanannya.</p><div class="tags"><span>UI/UX</span><span>2D artist</span></div></div>
+<div class="quest-details" hidden=""><details>
+<summary>Lihat proses</summary>
+<dl><dt>Yang saya buat</dt><dd>Tombol main menu, yang saya pasang sendiri di game.</dd><dt>Visual</dt><dd>Menerapkan visual hierarchy pada tampilan menu agar elemen penting lebih menonjol.</dd></dl>
+</details><a class="play-link" href="https://mr-mazoken.itch.io/reach-it" rel="noopener noreferrer" target="_blank">Play on itch.io ↗</a></div>
+</article>
+<article aria-label="Explore Slide to Cave" class="quest-card reveal" data-category="code" data-index="5" tabindex="0">
+<div class="quest-poster"><img alt="Gameplay Slide to Cave" class="" loading="lazy" src="assets/slide-cave-cover.jpg"/><div class="poster-overlay"><span>OPEN QUEST ↗</span></div></div>
+<div class="quest-info"><div class="quest-id">QUEST 06 <span>● COMPLETE</span></div><h3>Slide to Cave</h3><p>Game puzzle dengan mekanik ice slide.</p><div class="tags"><span>Programmer (GameMaker)</span><span>Aset: CC0, bukan buatan saya</span></div></div>
+<div class="quest-details" hidden=""><details>
+<summary>Lihat proses</summary>
+<dl><dt>Sistem yang saya buat</dt><dd>Mekanik seperti ice slide puzzle: karakter meluncur sampai menabrak tembok. Ada sekitar 42 level, fitur quick restart, dan pemilihan level.</dd><dt>Kredit aset</dt><dd>Aset CC0 oleh <a href="https://kevins-moms-house.itch.io/fantasy">kevins-moms-house</a>.</dd></dl>
+</details><a class="play-link" href="https://bakbakk21.itch.io/slidetocave" rel="noopener noreferrer" target="_blank">Play on itch.io ↗</a></div>
+</article></div></div></section>
+<section class="section collection" id="gallery"><div class="container"><div class="section-heading reveal"><div><span class="eyebrow">✦ BONUS CONTENT UNLOCKED</span><h2>THE ART ARCHIVE</h2><p class="section-intro">Some anime illustrations from my free time. Tap any piece to take a closer look.</p></div><span class="section-counter">SIDE QUEST / ART</span></div><div class="art-grid"><button aria-label="View anime illustration 1" class="art-piece reveal" type="button"><img alt="Ilustrasi anime 1" loading="lazy" src="assets/anime-1.jpg"/></button><button aria-label="View anime illustration 2" class="art-piece reveal" type="button"><img alt="Ilustrasi anime 2" loading="lazy" src="assets/anime-2.jpg"/></button><button aria-label="View anime illustration 3" class="art-piece reveal" type="button"><img alt="Ilustrasi anime 3" loading="lazy" src="assets/anime-3.jpg"/></button></div></div></section>
+<section class="section about-section" id="about"><div class="container about-layout"><div class="reveal"><span class="eyebrow">✦ PLAYER PROFILE</span><h2>ABOUT THE ARTIST</h2><p>Saya Abi Bakri, mahasiswa gametech dari Jombang, Jawa Timur. Jenis game yang saya suka adalah grand strategy dan action platformer 2D. Sekarang saya terbuka untuk pekerjaan studio atau proyek indie.</p><a class="game-btn small" href="#contact">✉ SEND A MESSAGE</a></div><div class="reveal"><span class="eyebrow">✦ EQUIPPED SKILLS</span><h2>INVENTORY</h2><ul class="skill-list"><li>Pixel art isometrik dan aset environment</li><li>Desain karakter, UI/UX, key art, poster, dan komik</li><li>GameMaker (GML) dan modding C# di tModLoader</li><li>Tool: Aseprite dan Krita</li></ul></div></div></section>
+<section class="contact-section" id="contact"><div class="container reveal"><span class="eyebrow">✦ NEW QUEST AVAILABLE</span><h2>LET'S MAKE<br/>SOMETHING COOL.</h2><p>Terbuka untuk pekerjaan studio, freelance, dan kolaborasi indie.</p><a class="game-btn" href="mailto:abibakrikitkat@gmail.com">✉ SEND EMAIL</a><div class="socials"><a href="https://www.instagram.com/equin_ewings/" rel="noopener noreferrer" target="_blank">INSTAGRAM ↗</a><a href="https://itch.io/profile/bakbakk21" rel="noopener noreferrer" target="_blank">ITCH.IO ↗</a><a href="https://github.com/EquineWings" rel="noopener noreferrer" target="_blank">GITHUB ↗</a></div></div></section></main>
+<footer class="footer"><div class="container"><span>© ABI BAKRI · MADE WITH ♥ &amp; PIXELS</span><span>END OF LEVEL? NOT QUITE. ✦</span></div></footer>
+<div aria-hidden="true" class="dialog-backdrop" id="projectModal"><div aria-labelledby="modalHeading" aria-modal="true" class="dialog" role="dialog"><div class="dialog-head"><strong id="modalHeading">PROJECT FILE</strong><button aria-label="Close project" class="close">✕</button></div><div class="dialog-content" id="projectBody"></div></div></div>
+<div aria-hidden="true" class="dialog-backdrop lightbox" id="imageModal"><button aria-label="Close image" class="close">✕</button><img alt="" id="zoomImage" src=""/></div><div aria-hidden="true" class="cursor-ring"></div><div aria-hidden="true" class="cursor-dot"></div><div aria-live="polite" class="easter-toast" role="status"></div><script>
+(()=>{'use strict';
+const $=(s,base=document)=>base.querySelector(s),$$=(s,base=document)=>[...base.querySelectorAll(s)];
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine=window.matchMedia('(pointer: fine)').matches;
+const revealObserver='IntersectionObserver'in window?new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}})},{threshold:.09}):null;
+$$('.reveal').forEach(el=>revealObserver?revealObserver.observe(el):el.classList.add('visible'));
+
+// Smooth pointer parallax with overscan and damped return to rest.
+// No sudden snap on pointerleave; CSS fallback scenery is not used.
+const hero=$('.hero');
+const layers=$$('[data-depth]',hero).map(el=>({el,depth:Number(el.dataset.depth)||0}));
+if(fine&&!reduced){
+ let tx=0,ty=0,x=0,y=0,active=false;
+ const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
+ hero.addEventListener('pointerenter',()=>{active=true},{passive:true});
+ hero.addEventListener('pointermove',e=>{
+   const r=hero.getBoundingClientRect();
+   tx=clamp(((e.clientX-r.left)/r.width-.5)*2,-1,1);
+   ty=clamp(((e.clientY-r.top)/r.height-.5)*2,-1,1);
+   active=true;
+ },{passive:true});
+ hero.addEventListener('pointerleave',()=>{active=false;tx=0;ty=0},{passive:true});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){active=false;tx=0;ty=0}});
+ function animateScene(){
+   x+=(tx-x)*.065;y+=(ty-y)*.065;
+   if(Math.abs(x)<.0001&&tx===0)x=0;
+   if(Math.abs(y)<.0001&&ty===0)y=0;
+   for(const {el,depth} of layers){
+      // The far background barely moves; foreground responds a little more.
+      const dx=-x*42*depth,dy=-y*28*depth;
+      el.style.transform=`translate3d(${dx.toFixed(2)}px,${dy.toFixed(2)}px,0)`;
+   }
+   requestAnimationFrame(animateScene);
+ }
+ requestAnimationFrame(animateScene);
+}
+const filters=$$('.filter'),cards=$$('.quest-card');filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(f=>{f.classList.toggle('active',f===btn);f.setAttribute('aria-pressed',String(f===btn))});cards.forEach(card=>{card.hidden=btn.dataset.filter!=='all'&&card.dataset.category!==btn.dataset.filter})}));
+const backdrop=$('#projectModal'),dialogBody=$('#projectBody'),heading=$('#modalHeading'),lightbox=$('#imageModal');let lastFocus=null;
+function openModal(card){lastFocus=document.activeElement;heading.textContent=`QUEST ${String(Number(card.dataset.index)+1).padStart(2,'0')} / PROJECT FILE`;const img=$('.quest-poster img',card),info=$('.quest-info',card),more=$('.quest-details',card);dialogBody.innerHTML='';const title=document.createElement('h2');title.textContent=$('h3',info).textContent;dialogBody.append(title);const hero=img.cloneNode(true);hero.removeAttribute('loading');hero.alt=img.alt;dialogBody.append(hero);const p=document.createElement('p');p.textContent=$('p',info).textContent;dialogBody.append(p);const tags=$('.tags',info).cloneNode(true);dialogBody.append(tags);const extra=more.cloneNode(true);extra.hidden=false;extra.classList.remove('quest-details');dialogBody.append(...[...extra.children]);backdrop.classList.add('open');backdrop.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';$('.close',backdrop).focus()}
+function closeModal(){backdrop.classList.remove('open');backdrop.setAttribute('aria-hidden','true');if(!lightbox.classList.contains('open'))document.body.style.overflow='';lastFocus?.focus?.()}
+cards.forEach(card=>{card.addEventListener('click',e=>{if(!e.target.closest('a'))openModal(card)});card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(card)}})});
+$('.close',backdrop).addEventListener('click',closeModal);backdrop.addEventListener('click',e=>{if(e.target===backdrop)closeModal()});
+let lightboxPrevious=null;function openImage(src,alt){lightboxPrevious=document.activeElement;$('#zoomImage').src=src;$('#zoomImage').alt=alt||'Artwork';lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.style.overflow='';document.body.style.overflow='hidden';$('.close',lightbox).focus()}
+function closeImage(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');$('#zoomImage').src='';if(!backdrop.classList.contains('open'))document.body.style.overflow='';lightboxPrevious?.focus?.()}
+document.addEventListener('click',e=>{let img=e.target.closest('.art-piece img, .dialog-content img');if(img)openImage(img.currentSrc||img.src,img.alt)});$('.close',lightbox).addEventListener('click',closeImage);lightbox.addEventListener('click',e=>{if(e.target===lightbox||e.target.id==='zoomImage')closeImage()});document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(lightbox.classList.contains('open'))closeImage();else if(backdrop.classList.contains('open'))closeModal()}if(e.key==='Tab'){const overlay=lightbox.classList.contains('open')?lightbox:backdrop.classList.contains('open')?backdrop:null;if(!overlay)return;const els=$$('a[href],button:not([disabled]),[tabindex="0"]',overlay).filter(x=>x.getClientRects().length);if(!els.length)return;let first=els[0],last=els[els.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+if(fine&&!reduced){const dot=$('.cursor-dot'),ring=$('.cursor-ring');let x=-100,y=-100,rx=-100,ry=-100;document.addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;dot.style.left=x+'px';dot.style.top=y+'px';ring.classList.toggle('hover',!!e.target.closest('a,button,.quest-card,.art-piece'))},{passive:true});function drawCursor(){rx+=(x-rx)*.17;ry+=(y-ry)*.17;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(drawCursor)}drawCursor();document.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;for(let i=0;i<5;i++){let s=document.createElement('i');s.className='spark';s.style.left=e.clientX+'px';s.style.top=e.clientY+'px';let ang=i*Math.PI*2/5;s.style.setProperty('--dx',Math.round(Math.cos(ang)*35)+'px');s.style.setProperty('--dy',Math.round(Math.sin(ang)*35)+'px');document.body.append(s);s.addEventListener('animationend',()=>s.remove(),{once:true})}})}
+let secrets=0;const toast=$('.easter-toast');$('#secretGem')?.addEventListener('click',()=>{secrets++;toast.textContent=secrets===1?'✦ SECRET FOUND! +100 IMAGINATION':secrets===3?'✦ ACHIEVEMENT: CURIOUS EXPLORER':'✦ +1 PIXEL MAGIC';toast.classList.add('show');clearTimeout(window._toastTimeout);window._toastTimeout=setTimeout(()=>toast.classList.remove('show'),2400)});
+const sections=$$('section[id]'),links=$$('.nav-links a');const spy='IntersectionObserver'in window?new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))})},{rootMargin:'-35% 0px -55% 0px'}):null;sections.forEach(s=>spy?.observe(s));
+
+// Playable hanging objects — pointer capture, constrained displacement, damped spring.
+const interactiveHero=document.querySelector('.hero');
+const stringsSvg=document.getElementById('hangingStrings');
+const stringGroup=document.getElementById('stringLines');
+const hangers=[...document.querySelectorAll('.hanger[data-pull]')];
+const hangingStates=hangers.map((el)=>({el,x:0,y:0,vx:0,vy:0,dragging:false,pointerId:null,lastX:0,lastY:0,baseX:0,baseY:0,homeX:0,homeY:0,max:Number(el.dataset.max)||85}));
+function hangingLayout(){
+ const hr=interactiveHero.getBoundingClientRect();
+ stringGroup.replaceChildren();
+ hangingStates.forEach(s=>{
+  const rect=s.el.getBoundingClientRect();
+  s.homeX=rect.left-hr.left-s.x+rect.width/2;
+  s.homeY=rect.top-hr.top-s.y;
+  const anchorCount=s.el.classList.contains('hanger-portrait')?2:1;
+  s.lines=[];
+  for(let j=0;j<anchorCount;j++){
+   const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+   stringGroup.append(line);s.lines.push(line);
+  }
+ });drawStrings();
+}
+function drawStrings(){
+ const hr=interactiveHero.getBoundingClientRect();
+ hangingStates.forEach(s=>{
+  const rect=s.el.getBoundingClientRect();
+  const targetY=rect.top-hr.top+7;
+  s.lines.forEach((line,i)=>{
+    const offset=s.lines.length===2?(i===0?-.29:.29)*rect.width:0;
+    const x=s.homeX+offset;
+    line.setAttribute('x1',x.toFixed(2));line.setAttribute('y1','0');
+    line.setAttribute('x2',(rect.left-hr.left+rect.width/2+offset).toFixed(2));line.setAttribute('y2',targetY.toFixed(2));
+  });
+ });
+}
+function updateHanger(s){
+ s.el.style.setProperty('--pull-x',s.x.toFixed(2)+'px');
+ s.el.style.setProperty('--pull-y',s.y.toFixed(2)+'px');
+ s.el.style.setProperty('--pull-angle',(s.x*.075).toFixed(2)+'deg');
+}
+let lastTick=performance.now();
+function animateHangers(now){
+ const dt=Math.min((now-lastTick)/16.667,2);lastTick=now;
+ if(!reduced){
+ hangingStates.forEach(s=>{
+  if(s.dragging)return;
+  // damped harmonic oscillator: acceleration = -spring*x - damping*velocity
+  s.vx+=(-.035*s.x-.15*s.vx)*dt;s.vy+=(-.035*s.y-.15*s.vy)*dt;
+  s.x+=s.vx*dt;s.y+=s.vy*dt;
+  if(Math.abs(s.x)+Math.abs(s.y)+Math.abs(s.vx)+Math.abs(s.vy)<.08){s.x=0;s.y=0;s.vx=0;s.vy=0;}
+  updateHanger(s);
+ });
+ }
+ drawStrings();requestAnimationFrame(animateHangers);
+}
+hangingStates.forEach(s=>{
+ s.el.addEventListener('pointerdown',e=>{
+  if(e.button!==0||e.target.closest('a,button'))return;
+  if(reduced)return;
+  s.dragging=true;s.pointerId=e.pointerId;s.baseX=e.clientX-s.x;s.baseY=e.clientY-s.y;s.lastX=s.x;s.lastY=s.y;s.vx=0;s.vy=0;
+  s.el.classList.add('is-dragging');s.el.setPointerCapture(e.pointerId);e.preventDefault();
+ });
+ s.el.addEventListener('pointermove',e=>{
+  if(!s.dragging||s.pointerId!==e.pointerId)return;
+  const dx=e.clientX-s.baseX,dy=e.clientY-s.baseY;
+  const len=Math.hypot(dx,dy),factor=len>s.max?s.max/len:1;
+  s.lastX=s.x;s.lastY=s.y;s.x=dx*factor;s.y=dy*factor;
+  s.vx=(s.x-s.lastX)*.55;s.vy=(s.y-s.lastY)*.55;
+  updateHanger(s);
+ });
+ function release(e){if(!s.dragging||s.pointerId!==e.pointerId)return;s.dragging=false;s.pointerId=null;s.el.classList.remove('is-dragging');try{s.el.releasePointerCapture(e.pointerId)}catch{}}
+ s.el.addEventListener('pointerup',release);s.el.addEventListener('pointercancel',release);s.el.addEventListener('lostpointercapture',()=>{s.dragging=false;s.el.classList.remove('is-dragging')});
+});
+const starHanger=document.querySelector('.hanger-star');
+starHanger.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();starHanger.querySelector('.asset-star').animate([{rotate:'-10deg'},{rotate:'12deg'},{rotate:'0deg'}],{duration:550});document.querySelector('.easter-toast').textContent='✦ STELLA FOUND A STAR!';document.querySelector('.easter-toast').classList.add('show');setTimeout(()=>document.querySelector('.easter-toast').classList.remove('show'),1800)}});
+starHanger.addEventListener('click',()=>{const t=document.querySelector('.easter-toast');t.textContent='✦ STELLA FOUND A STAR!';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)});
+window.addEventListener('resize',hangingLayout,{passive:true});
+window.addEventListener('load',hangingLayout,{once:true});
+requestAnimationFrame(()=>{hangingLayout();requestAnimationFrame(animateHangers)});
+})();</script></body></html>
